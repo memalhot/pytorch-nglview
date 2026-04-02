@@ -1,17 +1,17 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: pytorch-nglview
+  name: pytorch-ngl
   namespace: redhat-ods-applications
   labels:
     opendatahub.io/notebook-image: "true"
   annotations:
-    opendatahub.io/notebook-image-name: "PyTorch CUDA Jupyter with nglview"
+    opendatahub.io/notebook-image-name: "Pytorch with nglview"
     opendatahub.io/notebook-image-desc: >-
       Jupyter notebook image for OpenShift AI with PyTorch, CUDA tooling,
       bash kernel, and nglview support to interactively view molecular structures and trajectories.
     opendatahub.io/notebook-image-url: >-
-      https://quay.io/memalhot/pytorch-nglview
+      https://quay.io/memalhot/pytorch-ngl
 spec:
   lookupPolicy:
     local: true
@@ -19,7 +19,7 @@ spec:
     - name: latest
       from:
         kind: DockerImage
-        name: quay.io/memalhot/pytorch-nglview:latest
+        name: quay.io/memalhot/pytorch-ngl:latest
       importPolicy:
         scheduled: true
       referencePolicy:
