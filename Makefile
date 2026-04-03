@@ -1,4 +1,4 @@
-USER = memalhot
+USER = nerc-images
 IMAGE_NAME = pytorch-ngl
 TAG = latest
 REGISTRY = quay.io/$(USER)
